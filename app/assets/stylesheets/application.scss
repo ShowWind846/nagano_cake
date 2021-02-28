@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+  @import "bootstrap";
+	@import 'font-awesome-sprockets';
+	@import 'font-awesome';
+
+* {
+  margin: 0;
+  padding: 0;
+  border-sizing: border-box;
+}
+
+main {
+  margin-top: 30px;
+  with: 100%
+}
+
+.nav-item {
+  color: white;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+
+span {
+  color: #555555;
+  background-color: #DDDDDD;
+}
+
+.page-title {
+  font-size: 20px;
+}
+
+.contents {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+//LOGIN-PAGE//////////////
+.login-page {
+  width: 800px;
+  margin: 0 auto;
+}

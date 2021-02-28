@@ -4,12 +4,57 @@
     <title>NaganoCake</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <!--ヘッダー部分------------------------------->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #222222">
+      <div class="container">
+        <a class="navbar-brand p-3" href="/">ＮａｇａｎｏＣａｋｅ</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <% if user_signed_in? %>
+            <li class="nav-item">
+            <p>マイページ</p>
+            </li>
+            <li class="nav-item">
+            <p>商品一覧</p>
+            </li>
+            <li class="nav-item">
+            <p>カート</p>
+            </li>
+            <li class="nav-item">
+            <p>ログアウト</p>
+            </li>
+            <% else %>
+            <li class="nav-item">
+            <p><%= link_to "アバウト", public_about_path %></p>
+            </li>
+            <li class="nav-item">
+            <p>商品一覧</p>
+            </li>
+            <li class="nav-item">
+            <p>新規登録</p>
+            </li>
+            <li class="nav-item">
+            <p><%= link_to "ログイン", new_user_session_path %></p>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
     <%= yield %>
+
+
   </body>
 </html>
