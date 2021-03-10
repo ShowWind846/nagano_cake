@@ -1,0 +1,61 @@
+<!--管理者側：カスタマー編集ページ-->
+<main>
+  <div class="sign-up-page">
+    <span class="page-title">　<%= @customer.last_name %><%= @customer.first_name %>さんの会員情報編集　</span><BR><BR>
+
+    <%= form_with model: @customer, url: admin_customer_path(@customer) do |f| %>
+      <table>
+        <tbody>
+          <td width="200">会員ID</td>
+          <td width="220"><%= @customer.id %></td>
+          <td width="220"></td>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>氏名</td>
+            <td><%= f.text_field :last_name %></td>
+            <td><%= f.text_field :first_name %></td>
+          </tr>
+          <tr>
+            <td>フリガナ</td>
+            <td><%= f.text_field :last_name_kana %></td>
+            <td><%= f.text_field :first_name_kana %></td>
+          </tr>
+          <tr>
+            <td>郵便番号</td>
+            <td><%= f.text_field :postal_code %></td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <td width="200">住所</td>
+            <td width="500"><%= f.text_field :address, size: "60" %></td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr>
+            <td width="200">電話番号</td>
+            <td width="500"><%= f.text_field :address %></td>
+          </tr>
+          <tr>
+            <td>メールアドレス</td>
+            <td><%= f.email_field :email %></td>
+          </tr>
+          <tr>
+            <td>会員ステータス</td>
+            <td><%= f.radio_button :is_active,"true" %> 有効　<%= f.radio_button :is_active,"false" %> 無効</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><%= f.submit " 変更を保存 ", class: "btn btn-success btn-lg" %></td>
+          </tr>
+        </tbody>
+      </table>
+    <% end %>
+
+</div>
+</main>

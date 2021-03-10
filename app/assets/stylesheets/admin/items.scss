@@ -1,0 +1,49 @@
+// Place all the styles related to the admin::items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new-page {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.post-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+//INDEX_PAGE////////////////////////
+.index-page {
+  width: 860px;
+  margin: 0 auto;
+}
+
+.post_image {
+  float: left;
+  margin: 0 30px;
+}
+
+.index-menu {
+  float: left;
+}
+
+//注文履歴一覧画面////////////////
+.order-list-page {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+//商品編集画面///////////////////
+.item-edit-page {
+  width: 600px;
+  margin: 0 auto;
+}
+//商品一覧画面///////////////////
+.item-list-page {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.link-btn {
+  float: right;
+}

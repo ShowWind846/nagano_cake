@@ -1,0 +1,21 @@
+// Place all the styles related to the public::items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.item-index-page {
+    width: 1000px;
+    margin: 0 auto;
+}
+.item-menu {
+    display: inline-block;
+}
+.item-show-page {
+    width: 850px;
+    margin: 0 auto;
+}
+.item-image {
+    float: left;
+    padding-right: 30px;
+}
+.explain {
+    float: left;
+}

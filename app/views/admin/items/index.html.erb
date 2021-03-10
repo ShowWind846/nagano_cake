@@ -1,0 +1,33 @@
+<!--管理者側：商品一覧画面-->
+<main>
+  <div class="item-list-page">
+    <span class="page-title">　商品一覧　</span>
+    <%= link_to "　新規登録　", new_admin_item_path, class: "btn btn-success btn-sm link-btn" %>
+    <div class="contents">
+      <table class="table">
+        <thead bgcolor="#EEEEEE">
+          <th>商品ID</th>
+          <th>商品名</th>
+          <th>税抜価格</th>
+          <th>ジャンル</th>
+          <th>ステータス</th>
+        </thead>
+        <% @items.each do |item| %>
+        <tbody>
+          <td><%= item.id %></td>
+          <td><%= link_to "#{item.name}", admin_item_path(item.id) %></td>
+          <td><%= item.price.to_s(:delimited) %></td>
+          <td><%= Genre.find(item.genre_id).name %></td>
+          <td>
+            <% if item.is_active == true %>
+            <font color="green">販売中</font>
+            <% else %>
+            <font color="#DDDDDD">販売停止中</font>
+            <% end %>
+          </td>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</main>

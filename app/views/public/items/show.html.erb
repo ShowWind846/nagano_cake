@@ -1,0 +1,28 @@
+<!--ユーザー側：商品詳細-->
+<main>
+  <div class="item-show-page">
+    <div class="contents">
+      <div class="item-image">
+      <%= attachment_image_tag @item, :image, size: "300x220" %>
+      </div>
+      <table class="explain">
+        <thead>
+          <th><h2><%= @item.name %></h2></th>
+        </thead>
+        <tbody>
+          <tr><td><%= @item.introduction %></td></tr>
+          <tr><td><b><%= number_to_currency(@item.price*1.1, unit:"¥", precision:0) %></b>　(税込)</td></tr>
+          <tr><td>
+          <%= form_with(url: public_cart_items_path,local: true)do|f| %>
+            <%= f.select :amount, [[1,1],[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10]], prompt: "個数を選択してください" %>
+            <%= f.hidden_field :item_id, value: @item.id %>
+            <span>　　　</span>
+            <%= f.submit " カートに入れる ", class: "btn btn-success" %>
+          <% end %>
+          </td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</main>

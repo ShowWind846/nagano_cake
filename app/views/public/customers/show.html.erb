@@ -1,0 +1,60 @@
+<!--顧客のマイページ-->
+<main>
+  <div class="my-page">
+    <span class="page-title">　マイページ　</span>
+    <div class="contents">
+      <table class="chapter-table">
+        <tbody>
+          <tr>
+            <td width="130px"><span class="chapter-title">　登録情報　</span></td>
+            <td><span><%= link_to "　編集する　",edit_public_customer_path(current_user.id) ,class: "btn btn-success btn-sm" %></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="mypage-table">
+        <tbody>
+          <tr>
+            <td width="200px" bgcolor="#DDDDDD">氏名</td>
+            <td width="500px"><%= @customer.last_name %> <%= @customer.first_name %></td>
+          </tr>
+          <tr>
+            <td bgcolor="#DDDDDD">カナ</td>
+            <td><%= @customer.last_name_kana %> <%= @customer.first_name_kana %></td>
+          </tr>
+          <tr>
+            <td bgcolor="#DDDDDD">郵便番号</td>
+            <td><%= @customer.postal_code %></td>
+          </tr>
+          <tr>
+            <td bgcolor="#DDDDDD">住所</td>
+            <td><%= @customer.address %></td>
+          </tr>
+          <tr>
+            <td bgcolor="#DDDDDD">電話番号</td>
+            <td><%= @customer.telephone_number %></td>
+          </tr>
+          <tr>
+            <td bgcolor="#DDDDDD">メールアドレス</td>
+            <td><%= @customer.email %></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="chapter-table">
+        <tbody>
+          <tr>
+            <td width="130px"><span class="chapter-title">　配送先　</span></td>
+            <td><span><%= link_to "　一覧を見る　", root_path,class: "btn btn-primary btn-sm" %></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="chapter-table">
+        <tbody>
+          <tr>
+            <td width="130px"><span class="chapter-title">　注文履歴　</span></td>
+            <td><span><%= link_to "　一覧を見る　", root_path,class: "btn btn-primary btn-sm" %></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>

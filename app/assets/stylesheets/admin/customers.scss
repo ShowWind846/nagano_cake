@@ -1,0 +1,15 @@
+// Place all the styles related to the admin::customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.customers-index-page {
+  width: 800px;
+  margin: 0 auto;
+}
+.customer-show-page {
+  width: 1000px;
+  margin: 0 auto;
+}
+//テーブル////////////////////////
+table td,table th {
+  padding: 10px 10px;
+}

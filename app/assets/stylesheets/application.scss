@@ -23,33 +23,51 @@
   border-sizing: border-box;
 }
 
+.welcome-message {
+  color: white;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
 main {
   margin-top: 30px;
-  with: 100%
+  width: 100%
 }
 
 .nav-item {
   color: white;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-top: 12px;
-}
-
-span {
-  color: #555555;
-  background-color: #DDDDDD;
 }
 
 .page-title {
   font-size: 20px;
+  padding: 2px;
+  color: #555555;
+  background-color: #DDDDDD;
 }
 
 .contents {
   padding-top: 30px;
-  padding-left: 20px;
 }
 
 //LOGIN-PAGE//////////////
 .login-page {
-  width: 800px;
+  width: 700px;
   margin: 0 auto;
+}
+//SIGN_UP_PAGE///////////////
+.sign-up-page {
+  width: 900px;
+  margin: 0 auto;
+}
+.sign-up-page span {
+  margin-left: 40px;
 }

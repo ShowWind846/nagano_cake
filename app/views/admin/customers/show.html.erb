@@ -1,0 +1,52 @@
+<!--管理者側：ユーザー詳細ページ-->
+<main>
+  <div class="customer-show-page">
+    <span class="page-title">　<%= @customer.last_name %><%= @customer.first_name %>さんの会員詳細　</span>
+    <div class="contents">
+    <table class="table">
+      <tbody>
+        <td width="150">会員ID</td>
+        <td width="500"><%= @customer.id %></td>
+      </tbody>
+      <tbody>
+        <td width="150">氏名</td>
+        <td width="500"><%= @customer.last_name %>　<%= @customer.first_name %></td>
+      </tbody>
+      <tbody>
+        <td width="150">フリガナ</td>
+        <td width="500"><%= @customer.last_name_kana %>　<%= @customer.first_name_kana %></td>
+      </tbody>
+      <tbody>
+        <td width="150">郵便番号</td>
+        <td width="500"><%= @customer.postal_code %></td>
+      </tbody>
+      <tbody>
+        <td width="150">住所</td>
+        <td width="500"><%= @customer.address %></td>
+      </tbody>
+      <tbody>
+        <td width="150">電話番号</td>
+        <td width="500"><%= @customer.telephone_number %></td>
+      </tbody>
+      <tbody>
+        <td width="150">メールアドレス</td>
+        <td width="500"><%= @customer.email %></td>
+      </tbody>
+      <tbody>
+        <td width="150">会員ステータス</td>
+        <td width="500">
+          <% if @customer.is_active == true %>
+          <font color="green">有効</font>
+          <% else %>
+          <font color="#DDDDDD">退会</font>
+          <% end %>
+        </td>
+      </tbody>
+      <tbody>
+        <td width="150"></td>
+        <td width="500px"><%= link_to "　編集する　", edit_admin_customer_path(@customer.id), class: "btn btn-success" %>　　　　　<%= link_to "　注文履歴一覧を見る　", admin_customers_path, class: "btn btn-primary" %></td>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</main>

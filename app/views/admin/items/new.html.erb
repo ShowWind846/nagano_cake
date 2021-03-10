@@ -1,0 +1,53 @@
+<!--管理者側：商品投稿ページ-->
+<main>
+  <div class="new-page">
+    <span class="page-title">　商品新規登録　</span>
+    <div class="contents post-form">
+      <%= form_with model: @item, url: admin_items_path  do |f| %>
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col-4">商品画像</div>
+          <div class="col-8">
+            <%= f.attachment_field :image %>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-4">商品名</div>
+          <div class="col-8">
+            <%= f.text_field :name, size: "30x1" %>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-4">商品説明</div>
+          <div class="col-8">
+            <%= f.text_area :introduction, size: "30x4" %>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-4">ジャンル</div>
+          <div class="col-8">
+            <%= f.select :genre_id, [["ケーキ","1"],["プリン","2"],["焼き菓子","3"],["キャンディ","4"]] %>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-4">税込価格</div>
+          <div class="col-8">
+            <%= f.text_field :price, size: "30x1" %>円
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-4">販売ステータス</div>
+          <div class="col-8">
+            <%= f.radio_button :is_active, "true" %> 販売中
+            　<%= f.radio_button :is_active, "false" %> 販売停止中
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-4"></div>
+          <div class="col-8"><center><%= f.submit "　新規登録　", class: "btn btn-success btn-lg" %></center></div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</main>

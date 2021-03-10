@@ -15,6 +15,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #222222">
       <div class="container">
         <a class="navbar-brand p-3" href="/">ＮａｇａｎｏＣａｋｅ</a>
+        <dic class="welcome-message">
+        <!--ユーザーがログインしているとき-------------------------------------------->
+        <% if user_signed_in? %> Welcome ! <%= current_user.first_name %> <% else %> Please login.<% end %>
+        </dic>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,26 +26,44 @@
           <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
             <li class="nav-item">
-            <p>マイページ</p>
+            <p><%= link_to "マイページ", public_customer_path(current_user.id) %></p>
             </li>
             <li class="nav-item">
-            <p>商品一覧</p>
+            <p><%= link_to "商品一覧", public_items_path %></p>
             </li>
             <li class="nav-item">
-            <p>カート</p>
+            <p><%= link_to "カート", public_cart_items_path %></p>
             </li>
             <li class="nav-item">
-            <p>ログアウト</p>
+            <p><%= link_to "ログアウト", destroy_user_session_path, method: :DELETE %></p>
             </li>
+            <!--管理者がログインしている時--------------------------------->
+            <% elsif admin_signed_in? %>
+            <li class="nav-item">
+            <p><%= link_to "商品一覧", admin_items_path %></p>
+            </li>
+            <li class="nav-item">
+            <p><%= link_to "会員一覧", admin_customers_path %></p>
+            </li>
+            <li class="nav-item">
+            <p><%= link_to "注文履歴一覧", admin_root_path %></p>
+            </li>
+            <li class="nav-item">
+            <p><%= link_to "ジャンル一覧", admin_genres_path %></p>
+            </li>
+            <li class="nav-item">
+            <p><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></p>
+            </li>
+            <!--誰もログインしていない場合、未ログイン状態--------------------------------->
             <% else %>
             <li class="nav-item">
             <p><%= link_to "アバウト", public_about_path %></p>
             </li>
             <li class="nav-item">
-            <p>商品一覧</p>
+            <p><%= link_to "商品一覧", public_items_path %></p>
             </li>
             <li class="nav-item">
-            <p>新規登録</p>
+            <p><%= link_to "新規登録", new_user_registration_path %></p>
             </li>
             <li class="nav-item">
             <p><%= link_to "ログイン", new_user_session_path %></p>

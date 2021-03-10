@@ -1,0 +1,23 @@
+// Place all the styles related to the public::CartItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table th, table td {
+  border: solid 2px grey;
+}
+.cart-page {
+  width: 1000px;
+  margin: 0 auto;
+}
+.cart-table {
+  margin-bottom: 30px;
+}
+.cart-destroy-btn {
+  float: right;
+}
+.total-amount-table {
+  float: right;
+}
+.next-step {
+  width: 180px;
+  margin: 100px auto;
+}

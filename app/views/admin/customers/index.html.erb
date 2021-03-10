@@ -1,0 +1,29 @@
+<main>
+  <div class="customers-index-page">
+    <span class="page-title">　会員一覧　</span>
+    <div class="contents">
+      <table class="table">
+        <thead bgcolor="#EEEEEE">
+          <th width="50px">会員ID</th>
+          <th width="100px">氏名</th>
+          <th width="100px">メールアドレス</th>
+          <th width="100px">ステータス</th>
+        </thead>
+        <% @customers.each do |customer| %>
+        <tbody>
+          <td><%= customer.id %></td>
+          <td><%= link_to "#{customer.last_name} #{customer.first_name}", admin_customer_path(customer.id) %> </td>
+          <td><%= customer.email %></td>
+          <td>
+            <% if customer.is_active == true %>
+            <font color="green">有効</font>
+            <% else %>
+            <font color="#DDDDDD">退会</font>
+            <% end %>
+          </td>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</main>
