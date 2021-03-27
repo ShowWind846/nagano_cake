@@ -1,0 +1,28 @@
+<main>
+  <div class="address-edit-page">
+    <span class="page-title">　配送先編集　</span>
+    <div class="contents">
+      <table class="address-edit-table">
+        <%= form_with model: @address, url: {controller: 'addresses', action: 'update'} do |f| %>
+        <tbody>
+          <tr>
+            <td width="200px">郵便番号(ハイフンなし)</td>
+            <td width="450px"><%= f.text_field :postal_code %></td>
+            <td width="150px"></td>
+          </tr>
+          <tr>
+            <td>住所</td>
+            <td><%= f.text_field :user_address,size: 52 %></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>宛名</td>
+            <td><%= f.text_field :name %></td>
+            <td><%= f.submit " 変更内容を保存 ",class: "btn btn-sm btn-success" %></td>
+          </tr>
+        </tbody>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</main>

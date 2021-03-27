@@ -1,4 +1,5 @@
 class Public::CartItemsController < ApplicationController
+  include Searchform
 
 # cart_itemsのitem_id に itemの主キーをぶちこみたい。
   def index

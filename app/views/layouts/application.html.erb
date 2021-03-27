@@ -15,10 +15,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #222222">
       <div class="container">
         <a class="navbar-brand p-3" href="/">ＮａｇａｎｏＣａｋｅ</a>
-        <dic class="welcome-message">
+        <div class="welcome-message">
         <!--ユーザーがログインしているとき-------------------------------------------->
-        <% if user_signed_in? %> Welcome ! <%= current_user.first_name %> <% else %> Please login.<% end %>
-        </dic>
+        <% if user_signed_in? %> <%= link_to "Welcome !", root_path %> <%= current_user.first_name %> <% else %> Please login.<% end %>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

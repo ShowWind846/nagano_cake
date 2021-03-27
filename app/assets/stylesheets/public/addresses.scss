@@ -1,0 +1,22 @@
+// Place all the styles related to the public::addresses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+//////配送先登録 / 一覧ページ
+.address-index {
+  width: 800px;
+  margin: 0 auto;
+}
+.address-table {
+  margin-top: 50px;
+}
+.address-form td {
+  border: 0px none;
+}
+//////配送先編集ページ
+.address-edit-page {
+  width: 800px;
+  margin: 0 auto;
+}
+.address-edit-table td {
+  border: 0px none;
+}

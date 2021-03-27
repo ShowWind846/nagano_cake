@@ -1,7 +1,7 @@
 <!--ユーザー側：商品詳細-->
 <main>
   <div class="item-show-page">
-    <div class="contents">
+    <div class="show-exam">
       <div class="item-image">
       <%= attachment_image_tag @item, :image, size: "300x220" %>
       </div>
@@ -22,7 +22,14 @@
           </td></tr>
         </tbody>
       </table>
-
+    </div>
+    <!--ジャンル選択フォーム 試作-->
+    <div class="search-form">
+      ▼ ジャンル別で商品を探す
+      <%= form_with url: search_public_items_path, method: :get,local: true do %>
+        <%= select_tag 'genre',options_for_select($genre_name,1),include_blunk: true %>
+        <%= submit_tag "検索",class: "btn btn-sm btn-primary" %>
+      <% end %>
     </div>
   </div>
 </main>

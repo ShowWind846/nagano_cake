@@ -1,4 +1,5 @@
 class Public::CustomersController < ApplicationController
+  include Searchform
   # customers = user であることを認識する。
 
   def show

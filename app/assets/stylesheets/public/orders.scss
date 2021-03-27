@@ -1,0 +1,63 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 注文情報入力画面
+.order-page {
+  width: 800px;
+  margin: 0 auto;
+}
+.select-form {
+  margin-left: 40px;
+}
+.next-page {
+  width: 180px;
+  margin: 30px auto;
+}
+.menu {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+.address-menu {
+  margin-left: 20px;
+}
+.new-address-table td {
+  border: 0px none;
+}
+////////////////確認画面スタイルシート/////////////////
+.confirm-page {
+  width: 800px;
+  margin: 0 auto;
+}
+.confirm-table {
+  width: 550px;
+  float: left;
+  margin-right: 50px;
+}
+.price-table {
+  width: 200px;
+  float: left;
+}
+.add_place {
+  padding_top: 30px;
+}
+.add_table td {
+  border: 0px none;
+}
+.btn-center {
+  padding-top: 50px;
+  width: 140px;
+  margin: 0 auto;
+}
+.price-t {
+  padding-bottom: 100px;
+}
+/////Completeページ/////////////////
+.complete-page {
+  padding-top: 100px;
+  text-align: center;
+}
+.complete-page h2 {
+  font-size: 22px;
+  font-weight: bold;
+}

@@ -8,9 +8,13 @@
 .item-menu {
     display: inline-block;
 }
+/////////////////////商品詳細ページ
 .item-show-page {
     width: 850px;
     margin: 0 auto;
+}
+.show-exam {
+    height: 300px;
 }
 .item-image {
     float: left;
@@ -18,4 +22,10 @@
 }
 .explain {
     float: left;
+}
+.explain td, .explain th {
+    border: 0px none;
+}
+.search-form {
+    clear: both;
 }

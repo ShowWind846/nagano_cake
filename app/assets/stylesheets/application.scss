@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require select2
  *= require_tree .
  *= require_self
  */
@@ -20,9 +21,10 @@
 * {
   margin: 0;
   padding: 0;
-  border-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/////////////////////////ヘッダー部分
 .welcome-message {
   color: white;
 }
@@ -55,7 +57,7 @@ main {
 }
 
 .contents {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 //LOGIN-PAGE//////////////

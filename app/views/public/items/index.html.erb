@@ -2,22 +2,14 @@
 <main>
   <div class="item-index-page">
     <span class="page-title">　商品一覧　</span>
-    <div class="contents">
-      <table>
-      <% @items.each do |item| %>
-        <tbody class="item-menu">
-          <tr><td>
-          <%= link_to public_item_path(item.id) do %><%= attachment_image_tag item, :image, size: "200x150" %><% end %>
-          </td></tr>
-          <tr><td>
-          <%= item.name %>
-          </td><tr>
-          </tr><td>
-          ￥<%= item.price.to_s(:delimited) %>
-          </td></tr>
-        </tbody>
-      <% end %>
-      </table>
-    </div>
+    <!--ジャンル選択フォーム 試作-->
+    <%= form_with url: search_public_items_path, method: :get,local: true do %>
+      <%= select_tag 'genre',options_for_select(@genre_name,1),include_blunk: true %>
+      <%= submit_tag "検索",class: "btn btn-sm btn-success" %>
+    <% end %>
+    <!--ジャンル選択フォーム ここまで-->
+  <div class="test">
+    <%= render 'public/items/list', items: @items %>
+  </div>
   </div>
 </main>

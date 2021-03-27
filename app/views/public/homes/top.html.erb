@@ -1,17 +1,39 @@
 <main>
-
-<div class="explain-image">
-  <%= image_tag 'cake3.jpg', size: '500x280' %>
-  <p>　ようこそ、ながのＣＡＫＥへ！<br>
-  　このサイトは、ケーキ販売のＥＣサイトになります。<br>
-  　会員でない方も商品の閲覧はできますが、<br>
-  　購入には会員登録が必要になります。</p>
-</div>
-
-<div class="new_items">
-  <h2>新着商品</h2>
-  <p>新着商品リスト、おそらくリストタグ？</p>
-  <a href="#">全ての商品を見る ></a>
-</div>
-
+  <div class="first-page">
+    <!--/////////////タイトルイメージ部分-->
+    <div class="top-image">
+      <div class="explain-image">
+        <%= image_tag 'cake3.jpg', size: '500x280' %>
+        <p>　ようこそ、ながのＣＡＫＥへ！<br>
+        　このサイトは、ケーキ販売のＥＣサイトになります。<br>
+        　会員でない方も商品の閲覧はできますが、<br>
+        　購入には会員登録が必要になります。</p>
+      </div>
+    </div>
+    <!--////////////新着商品４つ表示させる部分-->
+    <div class="new-item-list">
+      <span class="page-title">新着商品</span><br>
+        <table class="new-item-table">
+          <tbody>
+            <tr>
+              <% @new_items.each do |new_item| %>
+              <td>
+              <%= link_to public_item_path(new_item.id) do %><%= attachment_image_tag new_item, :image, size: "150x100" %><% end %><br>
+              <%= new_item.name %><br>
+              <p>￥<%= new_item.price.to_s(:delimited) %></p>
+              </td>
+              <% end %>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div class="link-items">
+      <%= link_to "全ての商品を見る ＞", public_items_path, class: "go-to-items" %>
+      ジャンル別で商品を検索する
+      <%= form_with url: search_public_items_path, method: :get,local: true do %>
+        <%= select_tag 'genre',options_for_select($genre_name,1),include_blunk: true %>
+        <%= submit_tag "検索",class: "btn btn-sm btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 </main>

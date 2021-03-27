@@ -1,0 +1,17 @@
+    <div class="contents">
+      <table>
+      <% items.each do |item| %>
+        <tbody class="item-menu">
+          <tr><td>
+          <%= link_to public_item_path(item.id) do %><%= attachment_image_tag item, :image, size: "200x150" %><% end %>
+          </td></tr>
+          <tr><td>
+          <%= item.name %>
+          </td><tr>
+          </tr><td>
+          ￥<%= item.price.to_s(:delimited) %>
+          </td></tr>
+        </tbody>
+      <% end %>
+      </table>
+    </div>
