@@ -8,6 +8,10 @@
 .item-menu {
     display: inline-block;
 }
+.item-index-table th,.item-index-table td {
+    border: 0px none;
+    padding: 5px;
+}
 /////////////////////商品詳細ページ
 .item-show-page {
     width: 850px;

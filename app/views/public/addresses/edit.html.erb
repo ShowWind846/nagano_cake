@@ -3,7 +3,7 @@
     <span class="page-title">　配送先編集　</span>
     <div class="contents">
       <table class="address-edit-table">
-        <%= form_with model: @address, url: {controller: 'addresses', action: 'update'} do |f| %>
+        <%= form_with model: @address, url: {controller: 'addresses', action: 'update'},local: true do |f| %>
         <tbody>
           <tr>
             <td width="200px">郵便番号(ハイフンなし)</td>

@@ -1,10 +1,10 @@
 <!--管理者側：カスタマー編集ページ-->
 <main>
-  <div class="sign-up-page">
+  <div class="customer-edit-page">
     <span class="page-title">　<%= @customer.last_name %><%= @customer.first_name %>さんの会員情報編集　</span><BR><BR>
 
     <%= form_with model: @customer, url: admin_customer_path(@customer) do |f| %>
-      <table>
+      <table class="customer-edit-table">
         <tbody>
           <td width="200">会員ID</td>
           <td width="220"><%= @customer.id %></td>
@@ -27,7 +27,7 @@
           </tr>
         </tbody>
       </table>
-      <table>
+      <table class="customer-edit-table">
         <tbody>
           <tr>
             <td width="200">住所</td>
@@ -35,11 +35,11 @@
           </tr>
         </tbody>
       </table>
-      <table>
+      <table class="customer-edit-table">
         <tbody>
           <tr>
             <td width="200">電話番号</td>
-            <td width="500"><%= f.text_field :address %></td>
+            <td width="500"><%= f.text_field :telephone_number %></td>
           </tr>
           <tr>
             <td>メールアドレス</td>

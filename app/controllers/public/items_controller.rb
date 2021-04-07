@@ -3,18 +3,13 @@ class Public::ItemsController < ApplicationController
 
   def index
     @genre_name = Genre.all.map {|genre_name| [genre_name.name,genre_name.id]}
-    if @genre_id == nil
-      @items = Item.all
-    else
-      @items = Item.where(genre_id: @genre_id)
-    end
+    @items = Item.page(params[:page]).per(8)
   end
 
   def search
     @genre_name = Genre.all.map {|genre_name| [genre_name.name,genre_name.id]}
     @genre_id = params[:genre]
-    @items = Item.where(genre_id: @genre_id)
-    #binding.pry
+    @items = Item.where(genre_id: @genre_id).page(params[:page]).per(8)
     render :index
   end
 

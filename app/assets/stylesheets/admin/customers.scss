@@ -1,15 +1,33 @@
 // Place all the styles related to the admin::customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//一覧ページ//////////////////////
 .customers-index-page {
   width: 800px;
   margin: 0 auto;
 }
+//詳細ページ/////////////////////
 .customer-show-page {
-  width: 1000px;
+  width: 800px;
   margin: 0 auto;
 }
+.customer-index {
+}
+.customer-index th,.customer-index td {
+  border-width: 2px 0px 2px 0px;
+  border-color: #DDDDDD;
+}
 //テーブル////////////////////////
-table td,table th {
+.customer-table td,.customer-table th {
   padding: 10px 10px;
+  border: 0px none;
+}
+//編集ページ/////////////////////
+.customer-edit-page {
+  width: 800px;
+  margin: 0 auto;
+}
+.customer-edit-table td {
+  border: 0px none;
+  padding: 10px;
 }

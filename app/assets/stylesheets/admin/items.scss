@@ -12,7 +12,7 @@
   margin: 0 auto;
 }
 
-//INDEX_PAGE////////////////////////
+//商品一覧ページ////////////////////////
 .index-page {
   width: 860px;
   margin: 0 auto;
@@ -43,7 +43,10 @@
   width: 1000px;
   margin: 0 auto;
 }
-
+.item-index-table th, .item-index-table td {
+  border-width: 2px 0 2px 0;
+  border-color: #DDDDDD;
+}
 .link-btn {
   float: right;
 }

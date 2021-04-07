@@ -7,20 +7,25 @@
       <!--支払い方法の選択-------------------------------------------------------------->
       <div class="chapter-title">支払方法</div>
         <div class="select-form">
-          <%= f.radio_button :payment_style, "クレジットカード" %> クレジットカード<br>
+          <%= f.radio_button :payment_style, "クレジットカード", checked: true %> クレジットカード<br>
           <%= f.radio_button :payment_style, "銀行振込" %> 銀行振込
         </div>
-      <!--配送先住所の選択-------------------------------------------------------------->
+      <!--お届け先の選択-------------------------------------------------------------->
+      <!--1-->
       <div class="chapter-title">お届け先</div>
         <div class="select-form">
-        <%= f.radio_button :select_option, 0 %> ご自身の住所<br>
+        <%= f.radio_button :select_option, 0,checked: true %> ご自身の住所<br>
         <div class="menu">
         <span>〒 <%= current_user.postal_code %>　<%= current_user.address %></span><br>
-        <%= current_user.last_name %><%= current_user.first_name %><br></div>
+        <%= current_user.last_name %><%= current_user.first_name %><br>
+        </div>
+
+      <!--2-->
         <%= f.radio_button :select_option, 1 %> 登録済住所から選択<br>
         <div class="menu">
-          <%= f.collection_select :user_name, @r_s_addresses,:user_id,:name %>
+          <%= f.collection_select :user, @user_addresses, :id, :full_address %>
         </div>
+      <!--3-->
         <%= f.radio_button :select_option, 2 %> 新しいお届け先<br>
         <div class="address-menu">
           <table class="new-address-table">

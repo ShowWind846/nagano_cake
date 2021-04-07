@@ -4,7 +4,7 @@
     <span class="page-title">　商品一覧　</span>
     <%= link_to "　新規登録　", new_admin_item_path, class: "btn btn-success btn-sm link-btn" %>
     <div class="contents">
-      <table class="table">
+      <table class="table item-index-table table-hover">
         <thead bgcolor="#EEEEEE">
           <th>商品ID</th>
           <th>商品名</th>
@@ -28,6 +28,7 @@
         </tbody>
         <% end %>
       </table>
+      <%= paginate @items %>
     </div>
   </div>
 </main>

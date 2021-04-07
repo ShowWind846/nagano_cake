@@ -5,8 +5,11 @@
   width: 800px;
   margin: 0 auto;
 }
-.mypage-table{
+.mypage-table {
   margin: 20px auto;
+}
+.mypage-table td {
+  padding: 10px;
 }
 
 .chapter-title{
@@ -17,6 +20,7 @@
 }
 .chapter-table td {
   border: 0px none;
+  padding: 10px;
 }
 
 //ユーザー編集ページ///////////////
@@ -30,6 +34,7 @@
 }
 .user-edit-table td{
   border: 0px none;
+  padding: 10px;
 }
 .save-btn {
   margin-right: 150px;

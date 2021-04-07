@@ -1,13 +1,12 @@
 class Admin::ItemsController < ApplicationController
 # 商品一覧機能
 def index
-    @items = Item.all
-    #@item = Item.find(item.id)
-    #@genre = Genre.find_by(@item.genre_id)
+    @items = Item.page(params[:page]).per(10)
 end
 # 商品投稿機能
 def new
     @item = Item.new
+    @genres = Genre.all
 end
 
 def create

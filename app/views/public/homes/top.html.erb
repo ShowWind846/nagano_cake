@@ -18,7 +18,9 @@
             <tr>
               <% @new_items.each do |new_item| %>
               <td>
-              <%= link_to public_item_path(new_item.id) do %><%= attachment_image_tag new_item, :image, size: "150x100" %><% end %><br>
+              <div class="item-images">
+              <%= link_to public_item_path(new_item.id) do %><%= attachment_image_tag new_item, :image, size: "150x100" %><% end %>
+              </div><br>
               <%= new_item.name %><br>
               <p>￥<%= new_item.price.to_s(:delimited) %></p>
               </td>

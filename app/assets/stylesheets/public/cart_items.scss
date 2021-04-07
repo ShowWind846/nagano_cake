@@ -9,7 +9,10 @@ table th, table td {
   margin: 0 auto;
 }
 .cart-table {
-  margin-bottom: 30px;
+  margin: 0 auto;
+}
+.cart-table th, .cart-table td {
+  padding: 5px;
 }
 .cart-destroy-btn {
   float: right;
@@ -17,7 +20,13 @@ table th, table td {
 .total-amount-table {
   float: right;
 }
+.total-amount-table td {
+  padding: 5px;
+}
 .next-step {
   width: 180px;
   margin: 100px auto;
+}
+.cart-page-under {
+  margin-top: 20px;
 }

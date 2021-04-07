@@ -3,20 +3,25 @@
   <div class="order-list-page">
     <span class="page-title">注文履歴一覧</span>
     <div class="contents">
-      <table class="table">
-        <thead>
-          <th>購入日時</th>
-          <th>購入者</th>
-          <th>注文個数</th>
-          <th>注文ステータス</th>
+      <table class="table order-table">
+        <thead bgcolor="#DDDDDD">
+          <th width="200px" scope="col">購入日時</th>
+          <th width="200px">購入者</th>
+          <th width="200px">注文個数</th>
+          <th width="200px">注文ステータス</th>
         </thead>
         <tbody>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <% @orders.each do |order| %>
+          <tr>
+          <td><%= link_to admin_order_path(order.id) do %><%= l(order.created_at) %><% end %></td>
+          <td><%= order.user_name %></td>
+          <td><%= order.user_name %></td>
+          <td><%= order.order_status %></td>
+          </tr>
+          <% end %>
         </tbody>
       </table>
+
     </div>
   </div>
 </main>

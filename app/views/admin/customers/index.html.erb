@@ -2,8 +2,8 @@
   <div class="customers-index-page">
     <span class="page-title">　会員一覧　</span>
     <div class="contents">
-      <table class="table">
-        <thead bgcolor="#EEEEEE">
+      <table class="table table-hover customer-index">
+        <thead bgcolor="#DDDDDD">
           <th width="50px">会員ID</th>
           <th width="100px">氏名</th>
           <th width="100px">メールアドレス</th>
@@ -24,6 +24,7 @@
         </tbody>
         <% end %>
       </table>
+      <%= paginate @customers %>
     </div>
   </div>
 </main>

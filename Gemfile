@@ -72,3 +72,7 @@ gem "pry-byebug"
 
 gem 'jquery-turbolinks'
 gem 'select2-rails'
+
+gem 'rails-i18n'
+
+gem 'kaminari', '~> 1.2.1'

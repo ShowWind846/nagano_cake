@@ -1,5 +1,5 @@
     <div class="contents">
-      <table>
+      <table class="item-index-table">
       <% items.each do |item| %>
         <tbody class="item-menu">
           <tr><td>
@@ -14,4 +14,5 @@
         </tbody>
       <% end %>
       </table>
+      <%= paginate @items %>
     </div>

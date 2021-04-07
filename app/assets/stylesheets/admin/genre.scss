@@ -5,8 +5,14 @@
   width: 600px;
   margin: 0 auto;
 }
-
+.genre-add-table th {
+  border: 0px none;
+}
 .genre-table {
   margin-top: 50px;
   width: 400px;
+}
+.genre-table th, .genre-table td {
+  border-width: 2px 0 2px 0;
+  border-color: #DDDDDD;
 }

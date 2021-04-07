@@ -9,8 +9,12 @@
 .address-table {
   margin-top: 50px;
 }
+.address-table th,.address-table td {
+  padding: 10px;
+}
 .address-form td {
   border: 0px none;
+  padding: 5px;
 }
 //////配送先編集ページ
 .address-edit-page {
@@ -19,4 +23,5 @@
 }
 .address-edit-table td {
   border: 0px none;
+  padding: 5px;
 }

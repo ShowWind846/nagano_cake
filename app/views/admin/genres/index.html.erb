@@ -4,7 +4,7 @@
     <span class="page-title">　ジャンル一覧・追加　</span>
     <div class="contents">
       <%= form_with model: @genre, url: admin_genres_path do |f| %>
-      <table>
+      <table class="genre-add-table">
         <tbody>
           <th width="150px">ジャンル名</th>
           <th width="250px"><%= f.text_field :name %></th>

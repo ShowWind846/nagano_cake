@@ -3,7 +3,7 @@
   <div class="customer-show-page">
     <span class="page-title">　<%= @customer.last_name %><%= @customer.first_name %>さんの会員詳細　</span>
     <div class="contents">
-    <table class="table">
+    <table class="customer-table">
       <tbody>
         <td width="150">会員ID</td>
         <td width="500"><%= @customer.id %></td>
@@ -41,10 +41,10 @@
           <font color="#DDDDDD">退会</font>
           <% end %>
         </td>
-      </tbody>
+      </tbody>        
       <tbody>
         <td width="150"></td>
-        <td width="500px"><%= link_to "　編集する　", edit_admin_customer_path(@customer.id), class: "btn btn-success" %>　　　　　<%= link_to "　注文履歴一覧を見る　", admin_customers_path, class: "btn btn-primary" %></td>
+        <td width="500px"><%= link_to "　編集する　", edit_admin_customer_path(@customer.id), class: "btn btn-success" %>　　　　　<%= link_to "　注文履歴一覧を見る　", admin_root_path(order_sort: 1), class: "btn btn-primary" %></td>
       </tbody>
     </table>
     </div>
